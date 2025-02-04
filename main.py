@@ -3,7 +3,7 @@ import argparse
 from termcolor import colored
 from bs4 import BeautifulSoup
 import re
-from datetime import datetime
+import datetime
 from urllib.parse import urljoin
 
 class WebCrawler:
@@ -48,7 +48,7 @@ class WebCrawler:
 
     def print_banner(self):
         print("-" * 80)
-        print(colored(f"Recursive Web Crawler starting at {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}", 'cyan', attrs=['bold']))
+        print(colored(f"Recursive Web Crawler starting at {datetime.datetime.now().strftime('%d/%m/%Y %H:%M:%S')}", 'cyan', attrs=['bold']))
         print("-" * 80)
         print(f"[*] URL".ljust(20, " "), ":", self.url)
         print(f"[*] Max Depth".ljust(20, " "), ":", self.max_depth)
